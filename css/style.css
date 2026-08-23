@@ -878,16 +878,16 @@ a {
 
     border:
         1px solid
-        var(--border);
+        #514873;
 
     border-radius:
         9px;
 
     color:
-        var(--text-secondary);
+        var(--text);
 
     background:
-        #0c101a;
+        #514873;
 
     font-size:
         0.87rem;
@@ -906,13 +906,13 @@ a {
 
 .topic-button:hover {
     color:
-        var(--text);
+        #ffffff;
 
     background:
-        #111725;
+        #665b91;
 
     border-color:
-        var(--border-hover);
+        #665b91;
 
     transform:
         translateY(-1px);
