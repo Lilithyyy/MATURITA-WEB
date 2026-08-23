@@ -1,3 +1,36 @@
+const navigationContainer = document.querySelector("[data-navigation]");
+
+
+if (navigationContainer) {
+
+    fetch("../navigation.html")
+        .then((response) => response.text())
+        .then((navigation) => {
+
+            navigationContainer.innerHTML = navigation;
+
+            const currentPage =
+                window.location.pathname.split("/").pop();
+
+            navigationContainer
+                .querySelectorAll(".sidebar-link")
+                .forEach((link) => {
+
+                    const linkPage =
+                        link.getAttribute("href").split("/").pop();
+
+                    link.classList.toggle(
+                        "active",
+                        linkPage === currentPage
+                    );
+
+                });
+
+        });
+
+}
+
+
 const sidebar = document.getElementById("sidebar");
 const menuButton = document.getElementById("menuButton");
 const closeButton = document.getElementById("closeButton");
@@ -23,15 +56,15 @@ function closeSidebar() {
 
 
 // Open menu
-menuButton.addEventListener("click", openSidebar);
+menuButton?.addEventListener("click", openSidebar);
 
 
 // Close menu
-closeButton.addEventListener("click", closeSidebar);
+closeButton?.addEventListener("click", closeSidebar);
 
 
 // Close by clicking outside
-overlay.addEventListener("click", closeSidebar);
+overlay?.addEventListener("click", closeSidebar);
 
 
 // Close using Escape

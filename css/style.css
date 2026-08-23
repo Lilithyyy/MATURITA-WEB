@@ -999,6 +999,8 @@ a {
 
     float: right;
 
+    pointer-events: none;
+
     color:
         var(--accent);
 
@@ -1012,7 +1014,7 @@ a {
 
 /* Change + into − */
 
-.topic-details[open] summary::after {
+.topic-details[open] > summary::after {
     content: "−";
 }
 
