@@ -1158,6 +1158,16 @@ a {
 }
 
 
+.history-content p {
+    margin-left:
+        24px;
+
+    padding:
+        4px
+        8px;
+}
+
+
 .details-content ul {
     padding-left:
         22px;
