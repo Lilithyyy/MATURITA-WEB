@@ -1,0 +1,3 @@
+Bratislava 12,5
+Košice 9,8
+Prešov 11,2

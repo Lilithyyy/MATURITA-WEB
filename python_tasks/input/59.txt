@@ -1,0 +1,4 @@
+20
+2 1 Mlynská
+3 0 Hlavná
+1 2 Námestie

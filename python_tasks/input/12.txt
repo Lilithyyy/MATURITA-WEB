@@ -1,0 +1,4 @@
+60
+12 5 Hlavná
+8 3 Námestie
+14 9 Mlynská
