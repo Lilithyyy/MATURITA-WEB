@@ -36,16 +36,31 @@
 
         <section class="topic-section">
 
-            
-
-                </div>
-
+            <details>
+                <summary> Úloha 1 </summary>
+                <h3>Code</h3>
+                <pre><code id = "task-1-code">
+                    Loading code...
+                </code></pre>
             </details>
 
+            
         </section>
 
     </main>
 
+    <script>
+        fetch("../python_tasks/1.py")
+            .then(response => response.text())
+            .then(code => {
+                document.getElementById("task-1-code").textContent = code;
+            })
+            .catch(error => {
+                document.getElementById("task-1-code").textContent =
+                    "Nepodarilo sa načítať úlohu.";
+                console.error(error);
+            });
+    </script>
 </body>
 
 </html>
