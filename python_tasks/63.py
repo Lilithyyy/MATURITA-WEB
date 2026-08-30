@@ -1,4 +1,4 @@
-subor = open('subory/dopravny_prieskum.txt')
+subor = open('input/63.txt', 'r')
 zastavky = []
 pocet = 0
 maxpocet = 0

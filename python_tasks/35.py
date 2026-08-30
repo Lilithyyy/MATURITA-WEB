@@ -1,6 +1,6 @@
 import tkinter
 
-nazov = 'subory/komprimovany_obrazok_1.txt'
+nazov = 'input/29.txt'
 subor = open(nazov, 'r')
 riadok = subor.readline()
 subor.close()

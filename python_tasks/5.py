@@ -1,4 +1,4 @@
-subor = open('subory/objednane_jedla.txt', 'r')
+subor = open('input/5.txt', 'r')
 
 s = {'z':0, 'c':0, 'h':0, 'm':0}         
 pocet = 0

@@ -5,7 +5,7 @@ def generuj_priklad():
     priklad = '{} * {} = '.format(a, b)
     return priklad, a * b                         #  {riadok A}
 
-subor = open('subory/nasobilka_vystup.txt', 'w')
+subor = open('output/48.txt', 'w')
 priklady = []
 for i in range(10):
     priklad = generuj_priklad()

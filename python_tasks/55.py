@@ -27,7 +27,7 @@ def vykonaj(prikaz):
         uhol = (uhol + 90) % 360
 
 def zosuboru():
-    subor = open('subory/kresliaci_robot2.txt')
+    subor = open('input/55.txt', 'r')
     pocetopakovani = 0
     zoznam = []
     for riadok in subor:

@@ -1,4 +1,4 @@
-subor = open('subory/skok_do_dialky.txt')
+subor = open('input/14.txt')
 krajiny = {}
 maxdlzka = 0
 vitazi = []

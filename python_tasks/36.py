@@ -4,7 +4,7 @@ canvas = tkinter.Canvas(width=650, height=270)
 canvas.pack()
 
 krizovka = []
-subor = open('results/subory/krizovka1-1.txt', 'r')
+subor = open('input/36.txt', 'r')
 for r in subor:
     popis = r.split()
     riadok = (int(popis[0]), popis[1])

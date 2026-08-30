@@ -1,4 +1,4 @@
-subor = open('subory/tabulka_pocetnosti.txt')
+subor = open('input/20.txt', 'r')
 pocty = [0] * 26
 for riadok in subor:
     print(riadok, end='')

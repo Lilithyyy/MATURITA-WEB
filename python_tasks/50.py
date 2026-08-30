@@ -1,6 +1,6 @@
 import tkinter
 
-nazov = 'subory/obrys_obrazka_1.txt'
+nazov = 'input/29.txt'
 subor = open(nazov, 'r')
 riadok = subor.readline()
 subor.close()

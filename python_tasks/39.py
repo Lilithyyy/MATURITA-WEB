@@ -3,7 +3,7 @@ canvas = tkinter.Canvas(width=480, height=520, bg='white')
 canvas.pack()
 nespokojni = [0] * 24
 
-subor = open('subory/spokojnost_2.txt', 'r')
+subor = open('input/39.txt', 'r')
 for riadok in subor:
     riadok = riadok.strip()
     info = riadok.split()

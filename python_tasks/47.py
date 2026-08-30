@@ -4,7 +4,7 @@ canvas = tkinter.Canvas(width=200, height=200, bg='white')
 canvas.pack()
 
 kod = ''
-subor = open('subory/ciarovy_kod_1.txt', 'r')
+subor = open('input/47.txt', 'r')
 precitane = False
 
 def generuj_kod():

@@ -1,4 +1,4 @@
-subor = open('subory/sutaz_vbehu.txt')
+subor = open('input/11.txt')
 sportovci = []
 
 for riadok in subor:

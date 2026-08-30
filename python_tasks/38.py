@@ -1,7 +1,7 @@
 spokojni = [0] * 24
 nespokojni = [0] * 24
 
-subor = open('subory/spokojnost_2.txt', 'r')
+subor = open('input/38.txt', 'r')
 for riadok in subor:
     riadok = riadok.strip()
     info = riadok.split()

@@ -1,6 +1,6 @@
 vyjadreni = [0] * 24
 
-subor = open('subory/spokojnost_0.txt', 'r')
+subor = open('input/40.txt', 'r')
 dni = 0
 cas1 = '00:00'
 pocet_v_dni = 0

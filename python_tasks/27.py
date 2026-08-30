@@ -1,5 +1,5 @@
 import random
-subor = open('subory/virus.txt', 'r')
+subor = open('input/27.txt', 'r')
 riadky = subor.readlines()
 subor.close()
 

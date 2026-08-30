@@ -1,4 +1,4 @@
-subor = open('subory/hada.txt', 'r')
+subor = open('input/2.txt', 'r')
 subor2 = open('subory/hada_kompresia.txt', 'w')
 
 pocet = 0

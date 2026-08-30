@@ -19,12 +19,12 @@ def klik(sur):
             print(poradie)
             student = entry1.get()
             if student != '':
-                subor = open('subory/vyber_jedla.txt', 'a')
+                subor = open('output/41.txt', 'a')
                 subor.write(student+' '+skratky[poradie]+'\n')
                 subor.close()
 
 canvas.create_text(210, 20, text='VÝBER JEDLA', font='Arial 20', fill='red')
-subor = open('subory//vyber_jedla.txt', 'w')
+subor = open('output/41.txt', 'w')
 subor.close()
 
 vykresli()

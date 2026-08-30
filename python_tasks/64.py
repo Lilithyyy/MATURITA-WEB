@@ -5,7 +5,7 @@ canvas.pack()
 
 sirka, vyska = 90, 50
 studenti = []
-subor = open('subory/zasadaci_poriadok.csv', 'r')
+subor = open('input/64.txt', 'r')
 for riadok in subor:
     student = riadok.strip().split(';')
     studenti.append((student[0], student[1]))

@@ -20,7 +20,7 @@ def klik(event):
                       fill=entry1.get())
 
 def save():
-    subor = open('subory/editor_levelov1_vystup.txt', 'w')
+    subor = open('output/56.txt', 'w')
     for r in range(vyska):
         for s in range(sirka):
             subor.write(canvas.itemcget(siet[r][s], 'fill'))

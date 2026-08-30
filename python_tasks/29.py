@@ -16,8 +16,8 @@ def spracuj_riadok(vstup):
     vystup += str(pocet) + ' '                #  {riadok A}
     return vystup[:-1] + '\n'                 #  {riadok B}
     
-subor = open('subory/kompresia_obrazka_1.txt', 'r')
-subor_out = open('subory/kompresia_obrazka_vystup.txt', 'w')
+subor = open('input/29.txt', 'r')
+subor_out = open('output/29.txt', 'w')
 riadok = subor.readline()
 velkost = riadok.split()
 subor_out.write(riadok)

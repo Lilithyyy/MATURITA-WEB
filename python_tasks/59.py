@@ -3,7 +3,7 @@ import tkinter
 canvas = tkinter.Canvas(width=500, height=400, bg='white')
 canvas.pack()
 
-subor = open('subory/vytazenost_autobusovej_linky.txt')
+        subor = open('input/59.txt', 'r')
 kapacita = 0
 zastavky = []
 pocet = 0

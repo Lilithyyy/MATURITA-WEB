@@ -1,4 +1,4 @@
-subor = open('subory/meteo_stanice.txt', 'r')
+subor = open('input/4.txt', 'r')
 
 pocet = 0
 zoz = []

@@ -1,5 +1,5 @@
 import random
-subor = open('subory/obesenec.txt', 'r')
+subor = open('input/46.txt', 'r')
 slova = subor.readlines()
 subor.close()
 random.shuffle(slova)

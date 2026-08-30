@@ -3,14 +3,14 @@ import random
 pocty = [0] * 10
 vypadnuti = []
 
-subor = open('subory/hlasovanie_2.txt', 'r')
+subor = open('input/28.txt', 'r')
 for riadok in subor:
     cislo = int(riadok.strip())
     pocty[cislo - 5220] += 1                            
 subor.close()
 print('Počet zaslaných SMS:', sum(pocty))
 
-subor = open('subory/hlasovanie_vypadnuti.txt', 'r')
+subor = open('input/hlasovanie_vypadnuti.txt', 'r')
 for riadok in subor:
     cislo = int(riadok.strip())
     vypadnuti.append(cislo)

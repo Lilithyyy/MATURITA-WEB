@@ -1,4 +1,4 @@
-subor = open('subory/mena_zamestnancov.txt')
+subor = open('input/16.txt')
 mena = subor.readlines()
 subor.close()
 

@@ -1,4 +1,4 @@
-subor = open('subory/bus_vytazenost.txt')
+subor = open('input/12.txt')
 kapacita = int(subor.readline())
 zoznam = []
 pretazene = []

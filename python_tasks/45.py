@@ -1,6 +1,6 @@
 sk = []
 en = []
-subor = open('subory/ucenie_sa_slovicok.txt', 'r')
+subor = open('input/45.txt', 'r')
 i = 0
 for riadok in subor:
     if i%2 == 0:

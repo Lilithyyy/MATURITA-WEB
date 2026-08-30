@@ -2,7 +2,7 @@ import tkinter
 
 canvas = tkinter.Canvas(width=1000, height=400, bg='white')
 
-subor = open('subory/trasa_linky_metra.txt')
+subor = open('input/58.txt', 'r')
 metro = subor.readlines()
 subor.close()
 farba = metro.pop(0).strip()                                #  {riadok A}

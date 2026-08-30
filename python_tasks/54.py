@@ -1,7 +1,7 @@
 import tkinter
 
 stvorcek = 50
-subor = open('subory/lodicky.txt')
+subor = open('input/54.txt', 'r')
 cisla = subor.readline().split()
 sirka = int(cisla[0])
 vyska = int(cisla[1])

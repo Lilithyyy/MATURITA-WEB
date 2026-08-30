@@ -4,7 +4,7 @@ canvas = tkinter.Canvas(width=600, height=100, bg='black')
 canvas.pack()
 canvas.focus_set()
 
-subor = open('results/subory/zastavky.txt', 'r')
+subor = open('input/3.txt', 'r')
 zastavky = []
 for zastavka in subor:
     zastavky.append(zastavka.strip())

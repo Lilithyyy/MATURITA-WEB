@@ -1,6 +1,6 @@
 import random
 
-subor1 = open('subory/poprehadzovany_text1_vstup.txt', 'r')
+subor1 = open('input/21.txt', 'r')
 subor2 = open('subory/poprehadzovany_text1.txt', 'w')
 
 for riadok in subor1:
