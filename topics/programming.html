@@ -8,10 +8,12 @@
     <title>Programovanie | MaturitaWiki</title>
 
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Theme for colorful code font -->
     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/github-dark.min.css"> /*Theme for colorful code font*/
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/github-dark.min.css"> 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"></script>
+    <script src="../js/programming-tasks.js"></script>
     <script src="../js/main.js" defer></script>
 </head>
 
@@ -38,46 +40,182 @@
         </header>
 
 
-        <section class="topic-section">
-
-            <details class="topic-details">
-
-                <summary> Úloha 1 </summary>
-
-                <div class="details-content">
-
-                    <h3>Code</h3>
-                    <pre><code id="task-1-code" class="language-python">
-                        Loading code...
-                    </code></pre>
-
-                </div>
-
-            </details>
-
+        <section class="topic-section" id="programming-tasks">
+            
         </section>
 
     </main>
 
     <script>
-  
-        fetch("../python_tasks/1.py")
-            .then(response => response.text())
-            .then(code => {
-                const codeElement = document.getElementById("task-1-code");
+
+        async function createTask(task) {
+
+            const container =
+                document.getElementById("programming-tasks");
+
+
+            // DETAILS
+            const details =
+                document.createElement("details");
+
+            details.className = "topic-details";
+
+
+            // SUMMARY
+            const summary =
+                document.createElement("summary");
+
+            summary.textContent =
+                task.title
+                    ? `Úloha ${task.id} — ${task.title}`
+                    : `Úloha ${task.id}`;
+
+            details.appendChild(summary);
+
+
+            // CONTENT
+            const content =
+                document.createElement("div");
+
+            content.className = "details-content";
+
+
+            // CODE TITLE
+            const codeTitle =
+                document.createElement("h3");
+
+            codeTitle.textContent = "Code";
+
+
+            // CODE WINDOW
+            const codePre =
+                document.createElement("pre");
+
+            const codeElement =
+                document.createElement("code");
+
+            codeElement.className = "language-python";
+            codeElement.textContent = "Loading code...";
+
+            codePre.appendChild(codeElement);
+
+
+            // INPUT TITLE
+            const inputTitle =
+                document.createElement("h3");
+
+            inputTitle.textContent = "Input";
+
+
+            // INPUT WINDOW
+            const inputPre =
+                document.createElement("pre");
+
+            const inputElement =
+                document.createElement("code");
+
+            inputElement.className = "language-text";
+            inputElement.textContent = "Loading input...";
+
+            inputPre.appendChild(inputElement);
+
+
+            // DESCRIPTION TITLE
+            const descriptionTitle =
+                document.createElement("h3");
+
+            descriptionTitle.textContent = "Description";
+
+
+            // DESCRIPTION
+            const description =
+                document.createElement("p");
+
+            description.textContent =
+                task.description || "Description not added yet.";
+
+
+            // ASSEMBLE CONTENT
+            content.appendChild(codeTitle);
+            content.appendChild(codePre);
+
+            content.appendChild(inputTitle);
+            content.appendChild(inputPre);
+
+            content.appendChild(descriptionTitle);
+            content.appendChild(description);
+
+            details.appendChild(content);
+
+            container.appendChild(details);
+
+
+            // LOAD PYTHON FILE
+            try {
+
+                const response =
+                    await fetch(`../python_tasks/${task.file}`);
+
+                if (!response.ok) {
+                    throw new Error("Python file not found");
+                }
+
+                const code =
+                    await response.text();
 
                 codeElement.textContent = code;
 
                 hljs.highlightElement(codeElement);
-            })
-            .catch(error => {
-                document.getElementById("task-1-code").textContent =
-                    "Nepodarilo sa načítať úlohu.";
 
-                console.error(error);
-            });
+            } catch (error) {
+
+                codeElement.textContent =
+                    "Nepodarilo sa načítať Python súbor.";
+
+                console.error(
+                    `Task ${task.id}:`,
+                    error
+                );
+            }
+
+
+            // LOAD INPUT FILE
+            try {
+
+                const response =
+                    await fetch(
+                        `../python_tasks/${task.id}.txt`
+                    );
+
+                if (!response.ok) {
+                    throw new Error("Input file not found");
+                }
+
+                const input =
+                    await response.text();
+
+                inputElement.textContent = input;
+
+            } catch (error) {
+
+                inputElement.textContent =
+                    "Nepodarilo sa načítať vstupný súbor.";
+
+                console.error(
+                    `Task ${task.id}:`,
+                    error
+                );
+            }
+
+        }
+
+
+        programmingTasks.forEach(task => {
+            createTask(task);
+        });
 
     </script>
+
 </body>
 
 </html>
